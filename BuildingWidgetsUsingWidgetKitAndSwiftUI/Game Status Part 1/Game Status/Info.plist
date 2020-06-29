@@ -29,6 +29,7 @@
 	<array>
 		<string>CharacterSelectionAdvancedIntent</string>
 		<string>CharacterSelectionIntermediateIntent</string>
+		<string>CharactorSelectionIntent</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

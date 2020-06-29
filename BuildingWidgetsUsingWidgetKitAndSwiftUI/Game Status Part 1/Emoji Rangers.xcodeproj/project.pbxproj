@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		070DB0AD24A9B50400075399 /* CharacterSelection.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 070DB0AC24A9B50400075399 /* CharacterSelection.intentdefinition */; };
+		070DB0AE24A9B50800075399 /* CharacterSelection.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 070DB0AC24A9B50400075399 /* CharacterSelection.intentdefinition */; };
 		07E8045924A80514003DD190 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5733B346248884DD0035C9B7 /* WidgetKit.framework */; };
 		07E8045A24A80514003DD190 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5733B348248884DD0035C9B7 /* SwiftUI.framework */; };
 		07E8045D24A80514003DD190 /* EmojiRangerWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E8045C24A80514003DD190 /* EmojiRangerWidget.swift */; };
 		07E8046024A80516003DD190 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07E8045F24A80516003DD190 /* Assets.xcassets */; };
-		07E8046224A80516003DD190 /* EmojiRangerWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 07E8045E24A80514003DD190 /* EmojiRangerWidget.intentdefinition */; };
-		07E8046324A80516003DD190 /* EmojiRangerWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 07E8045E24A80514003DD190 /* EmojiRangerWidget.intentdefinition */; };
 		07E8046624A80516003DD190 /* EmojiRangerWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 07E8045824A80514003DD190 /* EmojiRangerWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		07E8046B24A805CC003DD190 /* CharacterDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D58F952498199300137818 /* CharacterDetail.swift */; };
 		07E8046C24A805CC003DD190 /* CharacterNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D58F9B2498199300137818 /* CharacterNameView.swift */; };
@@ -61,9 +61,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		070DB0AC24A9B50400075399 /* CharacterSelection.intentdefinition */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.intentdefinition; path = CharacterSelection.intentdefinition; sourceTree = "<group>"; };
 		07E8045824A80514003DD190 /* EmojiRangerWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = EmojiRangerWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		07E8045C24A80514003DD190 /* EmojiRangerWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiRangerWidget.swift; sourceTree = "<group>"; };
-		07E8045E24A80514003DD190 /* EmojiRangerWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = EmojiRangerWidget.intentdefinition; sourceTree = "<group>"; };
 		07E8045F24A80516003DD190 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07E8046124A80516003DD190 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07E8046724A80516003DD190 /* EmojiRangerWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EmojiRangerWidgetExtension.entitlements; sourceTree = "<group>"; };
@@ -113,8 +113,8 @@
 		07E8045B24A80514003DD190 /* EmojiRangerWidget */ = {
 			isa = PBXGroup;
 			children = (
+				070DB0AC24A9B50400075399 /* CharacterSelection.intentdefinition */,
 				07E8045C24A80514003DD190 /* EmojiRangerWidget.swift */,
-				07E8045E24A80514003DD190 /* EmojiRangerWidget.intentdefinition */,
 				07E8045F24A80516003DD190 /* Assets.xcassets */,
 				07E8046124A80516003DD190 /* Info.plist */,
 			);
@@ -342,11 +342,11 @@
 				07E8046B24A805CC003DD190 /* CharacterDetail.swift in Sources */,
 				07E8047024A805CC003DD190 /* ImageURLProtocol.swift in Sources */,
 				07E8046E24A805CC003DD190 /* AvatarView.swift in Sources */,
-				07E8046224A80516003DD190 /* EmojiRangerWidget.intentdefinition in Sources */,
 				07E8046F24A805CC003DD190 /* HealthLevelShape.swift in Sources */,
 				07E8045D24A80514003DD190 /* EmojiRangerWidget.swift in Sources */,
 				07E8047124A805CC003DD190 /* GameColors.swift in Sources */,
 				07E8046D24A805CC003DD190 /* AllCharactersView.swift in Sources */,
+				070DB0AE24A9B50800075399 /* CharacterSelection.intentdefinition in Sources */,
 				07E8046C24A805CC003DD190 /* CharacterNameView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,10 +356,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				43D58FA32498199400137818 /* HealthLevelShape.swift in Sources */,
-				07E8046324A80516003DD190 /* EmojiRangerWidget.intentdefinition in Sources */,
 				43D58FA12498199400137818 /* GameColors.swift in Sources */,
 				57A01E77248898F100D9E45F /* DetailView.swift in Sources */,
 				43D58FA62498199400137818 /* ImageURLProtocol.swift in Sources */,
+				070DB0AD24A9B50400075399 /* CharacterSelection.intentdefinition in Sources */,
 				43D58F9F2498199400137818 /* CharacterDetail.swift in Sources */,
 				43D58FA22498199400137818 /* AvatarView.swift in Sources */,
 				BE6A2CE7249988AD0022915C /* ContentView.swift in Sources */,
