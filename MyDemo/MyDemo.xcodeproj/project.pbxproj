@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07168B0124B20916009B42E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 071DAB3724AEB19E006B1F26 /* Assets.xcassets */; };
+		07168B0224B20918009B42E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 071DAB3724AEB19E006B1F26 /* Assets.xcassets */; };
+		07168B0324B20919009B42E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 071DAB3724AEB19E006B1F26 /* Assets.xcassets */; };
 		071DAB3024AEB19C006B1F26 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071DAB2F24AEB19C006B1F26 /* WidgetKit.framework */; };
 		071DAB3224AEB19C006B1F26 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071DAB3124AEB19C006B1F26 /* SwiftUI.framework */; };
 		071DAB3524AEB19C006B1F26 /* CaffeineWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071DAB3424AEB19C006B1F26 /* CaffeineWidget.swift */; };
@@ -336,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07F99CAD24A164F1009FF1C4 /* Preview Assets.xcassets in Resources */,
+				07168B0124B20916009B42E2 /* Assets.xcassets in Resources */,
 				07F99CAA24A164F1009FF1C4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +348,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07168B0224B20918009B42E2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +356,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07168B0324B20919009B42E2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

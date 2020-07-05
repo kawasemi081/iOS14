@@ -46,7 +46,7 @@ struct CaffeineWidgetEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        Text(entry.date, style: .time)
+        CaffeineWidgetView(data: .previewData)
     }
 }
 
@@ -56,8 +56,7 @@ struct CaffeineWidget: Widget {
 
     public var body: some WidgetConfiguration {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider(), placeholder: PlaceholderView()) { entry in
-//            CaffeineWidgetEntryView(entry: entry)
-            CaffeineWidgetView(data: .previewData)
+            CaffeineWidgetEntryView(entry: entry)
         }
         .configurationDisplayName("My Widget")
         .description("This is an example widget.")
