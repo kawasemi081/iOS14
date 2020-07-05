@@ -20,7 +20,7 @@ extension CaffeineWidgetData {
         caffeineAmount: Measurement<UnitMass>(value: 56.23, unit: .milligrams),
         drinkName: "Cappucino",
         drinkDate: Date().advanced(by: -60 * 29 + 5),
-        photoName: "capccino")
+        photoName: "cappcinoPhoto")
 }
 
 struct CaffeineWidgetView: View {

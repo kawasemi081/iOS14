@@ -56,12 +56,16 @@ struct CaffeineWidget: Widget {
 
     public var body: some WidgetConfiguration {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider(), placeholder: PlaceholderView()) { entry in
-            CaffeineWidgetEntryView(entry: entry)
+//            CaffeineWidgetEntryView(entry: entry)
+            CaffeineWidgetView(data: .previewData)
         }
         .configurationDisplayName("My Widget")
         .description("This is an example widget.")
     }
 }
+
+
+
 
 struct CaffeineWidget_Previews: PreviewProvider {
     static var previews: some View {
