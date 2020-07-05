@@ -10,13 +10,15 @@ import WidgetKit
 import SwiftUI
 
 struct Provider: IntentTimelineProvider {
-    func timeline(for configuration: CharacterSelectionIntent, with context: Context, completion: @escaping (Timeline<SimpleEntry>) -> ()) {
-        let selectedCharactor = caracter(for: configuration)
+    public typealias Entry = SimpleEntry
+    
+    func timeline(for configuration: DynamicCharacterSelectionIntent, with context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
+        let selectedCharactor = CharacterDetail.characterFromName(name: configuration.hero?.identifier)
         let endDate = selectedCharactor.fullHealthDate
         let oneMinute: TimeInterval = 60
         var currentDate = Date()
 
-        var entries: [SimpleEntry] = []
+        var entries: [Entry] = []
         while currentDate < endDate {
             let relevance = TimelineEntryRelevance(score: Float(selectedCharactor.healthLevel))
             let entry = SimpleEntry(date: currentDate, charactor: selectedCharactor, relevance: relevance)
@@ -28,23 +30,22 @@ struct Provider: IntentTimelineProvider {
         completion(timeline)
     }
     
-    typealias Intent = CharacterSelectionIntent
-    public typealias Entry = SimpleEntry
+    typealias Intent = DynamicCharacterSelectionIntent
 
-    func caracter(for configuration: CharacterSelectionIntent) -> CharacterDetail {
-        switch configuration.hero {
-        case .panda:
-            return .panda
-        case .egghead:
-            return .egghead
-        case .spouty:
-            return .spouty
-        default:
-            return .panda
-        }
-    }
+//    func caracter(for configuration: DynamicCharacterSelectionIntent) -> CharacterDetail {
+//        switch configuration.hero {
+//        case .panda:
+//            return .panda
+//        case .egghead:
+//            return .egghead
+//        case .spouty:
+//            return .spouty
+//        default:
+//            return .panda
+//        }
+//    }
 
-    public func snapshot(for configuration: CharacterSelectionIntent, with context: Context, completion: @escaping (SimpleEntry) -> ()) {
+    public func snapshot(for configuration: DynamicCharacterSelectionIntent, with context: Context, completion: @escaping (SimpleEntry) -> ()) {
         let entry = SimpleEntry(date: Date(), charactor: .panda, relevance: nil)
         completion(entry)
     }
@@ -94,12 +95,11 @@ struct EmojiRangerWidgetEntryView : View {
     }
 }
 
-@main
 struct EmojiRangerWidget: Widget {
     private let kind: String = "EmojiRangerWidget"
 
     public var body: some WidgetConfiguration {
-        IntentConfiguration(kind: kind, intent: CharacterSelectionIntent.self, provider: Provider(), placeholder: PlaceholderView()) { entry in
+        IntentConfiguration(kind: kind, intent: DynamicCharacterSelectionIntent.self, provider: Provider(), placeholder: PlaceholderView()) { entry in
             EmojiRangerWidgetEntryView(entry: entry)
         }
         .configurationDisplayName("Emoji Ranger Detail")
