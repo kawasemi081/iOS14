@@ -93,7 +93,7 @@
 		07E8045C24A80514003DD190 /* EmojiRangerWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiRangerWidget.swift; sourceTree = "<group>"; };
 		07E8045F24A80516003DD190 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07E8046124A80516003DD190 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		07E8046724A80516003DD190 /* EmojiRangerWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EmojiRangerWidgetExtension.entitlements; sourceTree = "<group>"; };
+		07E8046724A80516003DD190 /* EmojiRangerWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EmojiRangerWidgetExtension.entitlements; sourceTree = SOURCE_ROOT; };
 		1F38D2652489DD8D00C02D73 /* Game Status.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Game Status.entitlements"; sourceTree = "<group>"; };
 		43D58F952498199300137818 /* CharacterDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CharacterDetail.swift; path = "../Shared Sources/Data/CharacterDetail.swift"; sourceTree = SOURCE_ROOT; };
 		43D58F982498199300137818 /* GameColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameColors.swift; sourceTree = "<group>"; };
@@ -157,6 +157,7 @@
 		07E8045B24A80514003DD190 /* EmojiRangerWidget */ = {
 			isa = PBXGroup;
 			children = (
+				07E8046724A80516003DD190 /* EmojiRangerWidgetExtension.entitlements */,
 				0744EFE724AB62AE00C04F77 /* DynamicCharacterSelection.intentdefinition */,
 				070DB0AC24A9B50400075399 /* CharacterSelection.intentdefinition */,
 				07E8045C24A80514003DD190 /* EmojiRangerWidget.swift */,
@@ -201,7 +202,6 @@
 		5733B3202488842D0035C9B7 = {
 			isa = PBXGroup;
 			children = (
-				07E8046724A80516003DD190 /* EmojiRangerWidgetExtension.entitlements */,
 				BE6A2CDC249942FD0022915C /* README.md */,
 				5733B32B2488842D0035C9B7 /* Game Status */,
 				07E8045B24A80514003DD190 /* EmojiRangerWidget */,
