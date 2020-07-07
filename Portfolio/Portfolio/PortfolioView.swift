@@ -9,7 +9,7 @@ import SwiftUI
 import WidgetKit
 
 struct PortfolioView: View {
-    let character: PortfolioDetail
+    let portfolioDetail: PortfolioDetail
     let updateDate: Date
     @Environment(\.widgetFamily) var widgetFamily
 
@@ -18,11 +18,11 @@ struct PortfolioView: View {
             HStack {
                 VStack(alignment: .leading) {
                     VStack {
-                        PortfolioNameView(character, updateDate: updateDate)
+                        PortfolioNameView(portfolioDetail, updateDate: updateDate)
                         Spacer(minLength: 2)
                     }
                     if widgetFamily == .systemSmall {
-                        StockView(character: character)
+                        StockView(character: portfolioDetail)
                     } else {
                         let availableCharacters = PortfolioDetail.availableCharacters
                         HStack(spacing: 5) {
@@ -41,9 +41,9 @@ struct PortfolioView: View {
 struct PortfolioView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            PortfolioView(character: PortfolioDetail.egghead, updateDate: Date())
+            PortfolioView(portfolioDetail: PortfolioDetail.emojiName, updateDate: Date())
                 .previewContext(WidgetPreviewContext(family: .systemSmall))
-            PortfolioView(character: PortfolioDetail.egghead, updateDate: Date())
+            PortfolioView(portfolioDetail: PortfolioDetail.emojiName, updateDate: Date())
                 .previewContext(WidgetPreviewContext(family: .systemMedium))
         }
     }

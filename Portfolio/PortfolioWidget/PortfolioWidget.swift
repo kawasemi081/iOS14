@@ -13,12 +13,12 @@ struct Provider: IntentTimelineProvider {
     public typealias Entry = SimpleEntry
 
     public func snapshot(for configuration: ConfigurationIntent, with context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), charactor: .spouty, relevance: nil)
+        let entry = SimpleEntry(date: Date(), portfolioDetail: .alphabetName, relevance: nil)
         completion(entry)
     }
 
     public func timeline(for configuration: ConfigurationIntent, with context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        let selectedPortfolio = PortfolioDetail.characterFromName(name: configuration.portfolioName?.identifier)
+        let selectedPortfolio = PortfolioDetail.find(from: configuration.portfolioName?.identifier)
         var entries: [SimpleEntry] = []
 
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
@@ -26,7 +26,7 @@ struct Provider: IntentTimelineProvider {
         for hourOffset in 0 ..< 5 {
             let relevance = TimelineEntryRelevance(score: Float(selectedPortfolio.fundProfitLoss))
             let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, charactor: selectedPortfolio, relevance: relevance)
+            let entry = SimpleEntry(date: entryDate, portfolioDetail: selectedPortfolio, relevance: relevance)
             entries.append(entry)
         }
 
@@ -37,13 +37,13 @@ struct Provider: IntentTimelineProvider {
 
 struct SimpleEntry: TimelineEntry {
     public let date: Date
-    let charactor: PortfolioDetail
+    let portfolioDetail: PortfolioDetail
     let relevance: TimelineEntryRelevance?
 }
 
 struct PlaceholderView : View {
     var body: some View {
-        PortfolioWidgetEntryView(entry: SimpleEntry(date: Date(), charactor: .spouty, relevance: nil))
+        PortfolioWidgetEntryView(entry: SimpleEntry(date: Date(), portfolioDetail: .alphabetName, relevance: nil))
         /// - Attention: This is not available yet.
         /// - seeAlso: https://developer.apple.com/forums/thrzead/650564
 //            .isPlaceholder(true)
@@ -55,7 +55,7 @@ struct PortfolioWidgetEntryView : View {
     
     @ViewBuilder
     var body: some View {
-        PortfolioView(character: entry.charactor, updateDate: entry.date)
+        PortfolioView(portfolioDetail: entry.portfolioDetail, updateDate: entry.date)
     }
 }
 
@@ -78,7 +78,7 @@ struct PortfolioWidget: Widget {
 struct PortfolioWidget_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            PortfolioWidgetEntryView(entry: SimpleEntry(date: Date(), charactor: .spouty, relevance: nil))
+            PortfolioWidgetEntryView(entry: SimpleEntry(date: Date(), portfolioDetail: .alphabetName, relevance: nil))
             .previewContext(WidgetPreviewContext(family: .systemMedium))
             
             PlaceholderView()

@@ -20,7 +20,7 @@ struct PortfolioDetail: Hashable, Codable, Identifiable {
         name
     }
 
-    static let panda = PortfolioDetail(
+    static let longName = PortfolioDetail(
         name: "ポートフォリオ名１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０",
         url: URL(string: "game:///panda")!,
         profitLoss: -29489400,
@@ -29,7 +29,7 @@ struct PortfolioDetail: Hashable, Codable, Identifiable {
         fundCode: "9C31108A",
         fundProfitLoss: 50647.0,
         fundDaybeforeRatio: 703.0)
-    static let egghead = PortfolioDetail(
+    static let emojiName = PortfolioDetail(
         name: "ポートフォリオ名てすと👀",
         url: URL(string: "game:///egghead")!,
         profitLoss: 5,
@@ -39,7 +39,7 @@ struct PortfolioDetail: Hashable, Codable, Identifiable {
         fundProfitLoss: 1365.0,
         fundDaybeforeRatio: -3.0)
     
-    static let spouty = PortfolioDetail(
+    static let alphabetName = PortfolioDetail(
         name: "ポートフォリオ名chkyj",
         url: URL(string: "game:///spouty")!,
         profitLoss: 50,
@@ -49,12 +49,12 @@ struct PortfolioDetail: Hashable, Codable, Identifiable {
         fundProfitLoss: 364.11,
         fundDaybeforeRatio: 0.0)
 
-    public static let availableCharacters = [panda, egghead, spouty]
+    public static let availableCharacters = [longName, emojiName, alphabetName]
     
-    static func characterFromName(name: String?) -> PortfolioDetail {
+    static func find(from name: String?) -> PortfolioDetail {
         return availableCharacters.first(where: { (character) -> Bool in
             return character.name == name
-        }) ?? .panda
+        }) ?? .longName
     }
 
     func hash(into hasher: inout Hasher) {

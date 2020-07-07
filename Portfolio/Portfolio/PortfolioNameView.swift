@@ -8,17 +8,17 @@ import SwiftUI
 import WidgetKit
 
 struct PortfolioNameView: View {
-    let character: PortfolioDetail
+    let portfolioDetail: PortfolioDetail
     let updateDate: Date
 
     init(_ character: PortfolioDetail?, updateDate: Date) {
-        self.character = character ?? PortfolioDetail.panda
+        self.portfolioDetail = character ?? PortfolioDetail.longName
         self.updateDate = updateDate
     }
 
     var body: some View {
         VStack(alignment: .leading) {
-            Text(character.name)
+            Text(portfolioDetail.name)
                 .font(.title)
                 .fontWeight(.bold)
                 .minimumScaleFactor(0.3)
@@ -27,7 +27,7 @@ struct PortfolioNameView: View {
                 Text("損益: ")
                     .font(.caption)
                     .minimumScaleFactor(0.2)
-                Text("\(character.profitLoss, specifier: "%d")")
+                Text("\(portfolioDetail.profitLoss, specifier: "%d")")
                     .minimumScaleFactor(0.3)
                     .foregroundColor(.red)
             }
@@ -36,7 +36,7 @@ struct PortfolioNameView: View {
                 Text("前日比: ")
                     .font(.caption)
                     .minimumScaleFactor(0.2)
-                Text("+\(character.daybeforeRatio)")
+                Text("+\(portfolioDetail.daybeforeRatio)")
                     .minimumScaleFactor(0.3)
                     .foregroundColor(.blue)
             }
@@ -44,7 +44,7 @@ struct PortfolioNameView: View {
             Spacer(minLength: 1)
             
             HStack {
-                Text("\(updateDate, style: .time)")
+                Text("\(updateDate, style: .time) 更新")
                     .font(.caption2)
                     .minimumScaleFactor(0.2)
                 Spacer()
@@ -56,7 +56,7 @@ struct PortfolioNameView: View {
 
 struct PortfolioNameView_Previews: PreviewProvider {
     static var previews: some View {
-        PortfolioNameView(PortfolioDetail.panda, updateDate: Date())
+        PortfolioNameView(PortfolioDetail.longName, updateDate: Date())
             .previewContext(WidgetPreviewContext(family: .systemSmall))
 
     }
