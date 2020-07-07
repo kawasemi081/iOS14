@@ -17,7 +17,6 @@
 		07168AF224B204DA009B42E2 /* PortfolioWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07168AF124B204DA009B42E2 /* PortfolioWidget.swift */; };
 		07168AF524B204DB009B42E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07168AF424B204DB009B42E2 /* Assets.xcassets */; };
 		07168AF724B204DB009B42E2 /* PortfolioWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 07168AF324B204DA009B42E2 /* PortfolioWidget.intentdefinition */; };
-		07168AF824B204DB009B42E2 /* PortfolioWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 07168AF324B204DA009B42E2 /* PortfolioWidget.intentdefinition */; };
 		07168AFB24B204DB009B42E2 /* PortfolioWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 07168AEA24B204DA009B42E2 /* PortfolioWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		07168B0624B20B87009B42E2 /* PortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07168B0424B20B87009B42E2 /* PortfolioView.swift */; };
 		07168B0824B20C45009B42E2 /* PortfolioDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07168B0724B20C45009B42E2 /* PortfolioDetail.swift */; };
@@ -30,6 +29,8 @@
 		07168B5524B29F51009B42E2 /* PortfolioNameIntentHandler.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 07168B4E24B29F51009B42E2 /* PortfolioNameIntentHandler.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		07168B5924B29F5F009B42E2 /* PortfolioWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 07168AF324B204DA009B42E2 /* PortfolioWidget.intentdefinition */; };
 		07168B5A24B29F66009B42E2 /* PortfolioDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07168B0724B20C45009B42E2 /* PortfolioDetail.swift */; };
+		07168B5B24B2A817009B42E2 /* PortfolioNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07168B0B24B2104B009B42E2 /* PortfolioNameView.swift */; };
+		07168B5C24B2A8EB009B42E2 /* PortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07168B0424B20B87009B42E2 /* PortfolioView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +143,8 @@
 				07168AD224B1F6B4009B42E2 /* PortfolioApp.swift */,
 				07168AD424B1F6B4009B42E2 /* ContentView.swift */,
 				07168B0724B20C45009B42E2 /* PortfolioDetail.swift */,
+				07168B0424B20B87009B42E2 /* PortfolioView.swift */,
+				07168B0B24B2104B009B42E2 /* PortfolioNameView.swift */,
 				07168AD624B1F6B6009B42E2 /* Assets.xcassets */,
 				07168ADB24B1F6B6009B42E2 /* Info.plist */,
 				07168AD824B1F6B6009B42E2 /* Preview Content */,
@@ -172,8 +175,6 @@
 			isa = PBXGroup;
 			children = (
 				07168AF124B204DA009B42E2 /* PortfolioWidget.swift */,
-				07168B0424B20B87009B42E2 /* PortfolioView.swift */,
-				07168B0B24B2104B009B42E2 /* PortfolioNameView.swift */,
 				07168AF324B204DA009B42E2 /* PortfolioWidget.intentdefinition */,
 				07168AF424B204DB009B42E2 /* Assets.xcassets */,
 				07168AF624B204DB009B42E2 /* Info.plist */,
@@ -323,7 +324,6 @@
 			files = (
 				07168AD524B1F6B4009B42E2 /* ContentView.swift in Sources */,
 				07168B1024B21153009B42E2 /* PortfolioView.swift in Sources */,
-				07168AF824B204DB009B42E2 /* PortfolioWidget.intentdefinition in Sources */,
 				07168AD324B1F6B4009B42E2 /* PortfolioApp.swift in Sources */,
 				07168B1224B2128F009B42E2 /* PortfolioNameView.swift in Sources */,
 				07168B0824B20C45009B42E2 /* PortfolioDetail.swift in Sources */,
@@ -346,6 +346,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07168B5B24B2A817009B42E2 /* PortfolioNameView.swift in Sources */,
+				07168B5C24B2A8EB009B42E2 /* PortfolioView.swift in Sources */,
 				07168B5924B29F5F009B42E2 /* PortfolioWidget.intentdefinition in Sources */,
 				07168B5A24B29F66009B42E2 /* PortfolioDetail.swift in Sources */,
 				07168B5124B29F51009B42E2 /* IntentHandler.swift in Sources */,

@@ -10,6 +10,7 @@ import SwiftUI
 import Intents
 
 struct Provider: IntentTimelineProvider {
+    public typealias Entry = SimpleEntry
 
     public func snapshot(for configuration: ConfigurationIntent, with context: Context, completion: @escaping (SimpleEntry) -> ()) {
         let entry = SimpleEntry(date: Date(), charactor: .spouty, relevance: nil)
@@ -36,7 +37,7 @@ struct Provider: IntentTimelineProvider {
 
 struct SimpleEntry: TimelineEntry {
     public let date: Date
-    public let charactor: PortfolioDetail
+    let charactor: PortfolioDetail
     let relevance: TimelineEntryRelevance?
 }
 
@@ -50,10 +51,11 @@ struct PlaceholderView : View {
 }
 
 struct PortfolioWidgetEntryView : View {
-    let entry: Provider.Entry
+    var entry: Provider.Entry
     
+    @ViewBuilder
     var body: some View {
-        PortfolioView(PortfolioDetail.egghead, updateDate: entry.date)
+        PortfolioView(entry.charactor, updateDate: entry.date)
     }
 }
 

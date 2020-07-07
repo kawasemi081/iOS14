@@ -52,7 +52,7 @@ struct PortfolioDetail: Hashable, Codable, Identifiable {
     public static let availableCharacters = [panda, egghead, spouty]
     
     static func characterFromName(name: String?) -> PortfolioDetail {
-        return (availableCharacters).first(where: { (character) -> Bool in
+        return availableCharacters.first(where: { (character) -> Bool in
             return character.name == name
         }) ?? .panda
     }
