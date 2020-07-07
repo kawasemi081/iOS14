@@ -51,11 +51,11 @@ struct PlaceholderView : View {
 }
 
 struct PortfolioWidgetEntryView : View {
-    var entry: Provider.Entry
+    let entry: Provider.Entry
     
     @ViewBuilder
     var body: some View {
-        PortfolioView(entry.charactor, updateDate: entry.date)
+        PortfolioView(character: entry.charactor, updateDate: entry.date)
     }
 }
 

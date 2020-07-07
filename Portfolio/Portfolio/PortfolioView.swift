@@ -9,14 +9,9 @@ import SwiftUI
 import WidgetKit
 
 struct PortfolioView: View {
-    var character: PortfolioDetail
-    var updateDate: Date
+    let character: PortfolioDetail
+    let updateDate: Date
     @Environment(\.widgetFamily) var widgetFamily
-
-    init(_ character: PortfolioDetail, updateDate: Date) {
-        self.character = character
-        self.updateDate = updateDate
-    }
 
     var body: some View {
         ZStack {
@@ -46,9 +41,9 @@ struct PortfolioView: View {
 struct PortfolioView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            PortfolioView(PortfolioDetail.egghead, updateDate: Date())
+            PortfolioView(character: PortfolioDetail.egghead, updateDate: Date())
                 .previewContext(WidgetPreviewContext(family: .systemSmall))
-            PortfolioView(PortfolioDetail.egghead, updateDate: Date())
+            PortfolioView(character: PortfolioDetail.egghead, updateDate: Date())
                 .previewContext(WidgetPreviewContext(family: .systemMedium))
         }
     }
